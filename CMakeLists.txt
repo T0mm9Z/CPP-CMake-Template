@@ -12,10 +12,7 @@ set(LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
 
 message("Source Dir: " ${SRC_DIR})
 message("Current Binary Dir: " ${CMAKE_CURRENT_BINARY_DIR})
-add_subdirectory(${SRC_DIR})
 
-# add_custom_command(
-#         TARGET ${PROJECT_NAME}  POST_BUILD
-#         COMMAND ${CMAKE_COMMAND} -E copy
-#                 ${CMAKE_CURRENT_BINARY_DIR}/cmake_templ_main
-#                 ${BIN_DIR}/cmake_templ_main)
+include_directories(${INC_DIR})
+
+add_subdirectory(${SRC_DIR})
